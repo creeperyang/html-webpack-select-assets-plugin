@@ -4,8 +4,9 @@
   "description": "Select certain output files to the html file. Works with newer html-webpack-plugin versions.",
   "main": "plugin.js",
   "scripts": {
+    "pretest": "npm run eslint",
     "test": "mocha test/*.spec.js --exit",
-    "eslint": "npx eslint plugin.js"
+    "eslint": "npx eslint plugin.js test/*.js"
   },
   "repository": {
     "type": "git",

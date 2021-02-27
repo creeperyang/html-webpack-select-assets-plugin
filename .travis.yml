@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "10"
+  - "12"
+  - "14"
+
+env:
+  - WEBPACK_VERSION=4 HTML_PLUGIN_VERSION=4
+  - WEBPACK_VERSION=4 HTML_PLUGIN_VERSION=5
+  - WEBPACK_VERSION=5 HTML_PLUGIN_VERSION=5
+
+install:
+  - npm install
+  - npm install -D webpack@$WEBPACK_VERSION || true
+  - npm install -D html-webpack-plugin@$HTML_PLUGIN_VERSION || true
+
+script:
+  - npm test
