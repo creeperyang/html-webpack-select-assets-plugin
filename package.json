@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-select-assets-plugin",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "Select certain output files to the html file.",
   "main": "plugin.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "test": "mocha test/*.spec.js --exit",
     "eslint": "npx eslint plugin.js test/*.js"
   },
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/creeperyang/html-webpack-select-assets-plugin.git"
