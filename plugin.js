@@ -124,9 +124,11 @@ module.exports = class HtmlSelectAssetsPlugin {
     }
     apply(compiler) {
         const selector = this.selector;
-        // webpack 4 support
+        // Only support webpack>=4 & html-webpack>=4
+        if (!HtmlWebpackPlugin.getHooks) {
+            throw new Error('Cannot find appropriate compilation hook');
+        }
         compiler.hooks.compilation.tap(PLUGIN_NAME, (compilation) => {
-            // html-webpack 4
             const hooks = HtmlWebpackPlugin.getHooks(compilation);
             hooks.alterAssetTags.tapAsync(
                 PLUGIN_NAME,
