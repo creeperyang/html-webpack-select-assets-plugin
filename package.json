@@ -4,7 +4,8 @@
   "description": "Select certain output files to the html file. Works with newer html-webpack-plugin versions.",
   "main": "plugin.js",
   "scripts": {
-    "test": "mocha test/*.spec.js --exit"
+    "test": "mocha test/*.spec.js --exit",
+    "eslint": "npx eslint plugin.js"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,21 @@
   },
   "homepage": "https://github.com/creeperyang/html-webpack-select-assets-plugin#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "chai": "^4.3.0",
     "css-loader": "^5.1.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
     "html-webpack-plugin": "^5.2.0",
     "mini-css-extract-plugin": "^1.3.8",
     "mocha": "^8.3.0",
+    "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "webpack": "^5.24.2"
   },
