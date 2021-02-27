@@ -133,7 +133,7 @@ module.exports = class HtmlSelectAssetsPlugin {
 
     apply(compiler) {
         const selector = this.selector;
-        // Only support webpack>=4 & html-webpack>=4
+        // Only support webpack>=4 & html-webpack>=5
         if (!HtmlWebpackPlugin.getHooks) {
             throw new Error('Cannot find appropriate compilation hook');
         }

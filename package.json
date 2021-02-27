@@ -1,7 +1,7 @@
 {
   "name": "html-webpack-select-assets-plugin",
   "version": "0.1.0-alpha",
-  "description": "Select certain output files to the html file. Works with newer html-webpack-plugin versions.",
+  "description": "Select certain output files to the html file.",
   "main": "plugin.js",
   "scripts": {
     "pretest": "npm run eslint",
@@ -46,7 +46,7 @@
     "webpack": "^5.24.2"
   },
   "peerDependencies": {
-    "html-webpack-plugin": ">=4.0.0",
+    "html-webpack-plugin": ">=5.0.0",
     "webpack": ">=4.0.0"
   },
   "engines": {
