@@ -35,14 +35,16 @@ import HtmlWebpackSelectAssetsPlugin from 'html-webpack-select-assets-plugin';
 }
 ```
 
-The plugin takes a configuration argument with a key called `selector`. It will help you to select assets for the specified output html.
+The plugin takes a configuration argument with a key called `selector`. It will help you to select assets to the specified output html.
 
 The typical or **most powerful usage case** is when you deal with **multiple** html pages:
 
 - You have multiple `entry` for webpack entry config;
-- Only one HtmlWebpackPlugin instance and config with `filename: (entry) => \`${entry}.html\`` to generate multiple html files (one-to-one correspond to each entry js file).
+- Only one HtmlWebpackPlugin instance and config with `filename: (entry) => entry + '.html'` to generate multiple html files (one-to-one correspond to each entry point).
 
-The problem is that HtmlWebpackPlugin will inject all (entry) assets files to each html file. What if you only want the corresponding entry's assets? This is why `html-webpack-select-assets-plugin` here -- select assets corresponding to entry.
+The problem is that HtmlWebpackPlugin will inject all (entries') assets files to each html file. What if you only want the corresponding entry's assets? 
+
+This is why `html-webpack-select-assets-plugin` here -- select assets corresponding to the entry.
 
 ## Powerful `selector` option
 
